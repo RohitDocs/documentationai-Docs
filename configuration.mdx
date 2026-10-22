@@ -1,0 +1,160 @@
+---
+title: Configuration
+description: Customize your documentation space with settings that control branding, structure, and publishing behavior. Use this guide to tailor the starter kit to your project’s needs.
+---
+
+## Overview
+
+This page shows how to configure the starter kit for rohit singh. You can adjust branding, navigation, and publishing settings so the documentation matches your project and workflow.
+
+Because this is a starter kit template, the examples are intentionally generic and easy to customize. Replace the sample values with your own site name, colors, and publishing rules as your documentation evolves.
+
+<Callout kind="info">
+  This guide uses sample settings for a starter kit. Update the values to match your own product, team, and release process.
+</Callout>
+
+## What you can configure
+
+<Columns cols={2}>
+  <Card title="Site settings" icon="settings" href="#site-settings">
+    Define your site title, description, and default metadata.
+  </Card>
+  <Card title="Navigation setup" icon="book-open" href="#navigation-setup">
+    Organize pages, labels, and menu order for easier browsing.
+  </Card>
+  <Card title="Branding options" icon="zap" href="#branding-options">
+    Set your logo, theme color, and visual identity.
+  </Card>
+  <Card title="Publishing preferences" icon="rocket" href="#publishing-preferences">
+    Control build output, visibility, and deployment behavior.
+  </Card>
+</Columns>
+
+## Site settings
+
+Start with the basics: the site name, default description, and metadata that appear across your documentation. These settings help you keep the project consistent and make it easier for readers to understand the purpose of the site.
+
+### Example configuration file
+
+<CodeGroup tabs="YAML,JSON">
+  ```yaml
+site:
+  name: "rohit singh"
+  description: "Welcome to rohit singh's documentation. This is your default documentation space where you can organize and manage all your project documentation."
+  language: "en"
+  ```
+  ```json
+{
+  "site": {
+    "name": "rohit singh",
+    "description": "Welcome to rohit singh's documentation. This is your default documentation space where you can organize and manage all your project documentation.",
+    "language": "en"
+  }
+}
+  ```
+</CodeGroup>
+
+## Navigation setup
+
+You can control how pages appear in the left navigation and how they are grouped. A clear structure helps readers find content quickly, especially when your documentation grows beyond a few pages.
+
+<Steps>
+  <Step title="Define your top-level sections" icon="folder-open">
+    Group related pages under headings such as Getting Started, Guides, and Reference.
+  </Step>
+  <Step title="Set the order" icon="arrow-right">
+    Place the most important pages first so readers see them without scrolling.
+  </Step>
+  <Step title="Add short labels" icon="tag">
+    Use concise menu labels that match how readers search for content.
+  </Step>
+</Steps>
+
+### Sample navigation structure
+
+```javascript
+export const navigation = [
+  {
+    title: "Getting Started",
+    items: [
+      { title: "Overview", href: "/introduction" },
+      { title: "Quickstart", href: "/quickstart" }
+    ]
+  },
+  {
+    title: "Reference",
+    items: [
+      { title: "Configuration", href: "/configuration" },
+      { title: "Changelog", href: "/changelog" }
+    ]
+  }
+];
+```
+
+## Branding options
+
+Use branding settings to make the documentation feel like part of your product. A consistent color palette, logo, and typography improve recognition and create a more polished reading experience.
+
+<Tabs>
+  <Tab title="Theme color" icon="palette">
+    Use your brand color as the primary accent across buttons, links, and callouts.
+
+    ```css
+    :root {
+      --brand-color: #3B82F6;
+      --brand-color-hover: #2563EB;
+    }
+    ```
+  </Tab>
+  <Tab title="Logo" icon="image">
+    Add a logo that works in both light and dark backgrounds. SVG is usually the best choice for sharp scaling.
+  </Tab>
+  <Tab title="Typography" icon="type">
+    Choose a font stack that matches your product voice and remains readable on small screens.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Keep your branding simple at first. A focused visual system is easier to maintain than a heavily customized theme.
+</Callout>
+
+## Publishing preferences
+
+Publishing settings control how your documentation is built and released. These options are useful when you want to preview changes locally, publish to a staging site, or manage production deploys with confidence.
+
+### Common publishing choices
+
+| Setting | Recommended value | Why it helps |
+|--------|-------------------|--------------|
+| Draft mode | Enabled in preview branches | Lets you review changes before release |
+| Search indexing | Enabled for public docs | Helps readers find content faster |
+| Build output | Static site | Keeps deployment simple and reliable |
+| Versioning | Optional | Useful when you maintain multiple releases |
+
+### Example deployment configuration
+
+```toml
+[build]
+command = "npm run build"
+output = "dist"
+
+[publishing]
+draft_mode = true
+index_search = true
+```
+
+## Advanced options
+
+<Expandable title="How do I preview changes locally?" default-open="false">
+  Run your local development server and review pages before publishing. This helps you catch navigation issues, broken links, and formatting problems early.
+</Expandable>
+
+<Expandable title="Can I change the starter content later?" default-open="false">
+  Yes. Treat this page as a starting point. Replace sample labels, colors, and examples with the conventions that fit your team.
+</Expandable>
+
+## Next steps
+
+Once you finish the core configuration, review your navigation and update the homepage content so readers immediately understand what the docs cover. Then verify that your publishing workflow matches your release process.
+
+If you want to continue, add more pages for setup, usage, and reference material so the documentation grows in a structured way.

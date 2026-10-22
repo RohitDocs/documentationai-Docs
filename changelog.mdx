@@ -1,0 +1,172 @@
+---
+title: Changelog
+description: Track recent updates, improvements, and fixes to the documentation starter kit. Review what changed and stay informed about new capabilities and content updates.
+---
+
+## Overview
+
+Welcome to the changelog for `rohit singh` documentation. This starter kit gives you a clean, customizable space to organize product notes, release history, and content improvements without assuming anything about your real product workflow.
+
+Use this page to review recent releases, understand what changed, and track improvements over time. Each entry below is sample content you can adapt to your own documentation process.
+
+<Callout kind="info">
+This is a starter kit template. Replace the sample release notes with your own product updates, milestones, and editorial changes.
+</Callout>
+
+## Recent releases
+
+<Update label="2026-10-18" description="v1.4.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added a reusable release note structure for documenting product and content changes.
+- Introduced clearer section grouping so you can scan updates faster.
+- Added examples that show how to describe new capabilities in plain language.
+
+## Improvements
+
+- Refined the changelog layout to make recent updates easier to read.
+- Improved consistency across headings, bullet lists, and component usage.
+- Expanded sample text so you can reuse it as a baseline for your own updates.
+
+## Bug Fixes
+
+- Fixed inconsistent spacing in example entries.
+- Corrected a few formatting issues in sample documentation copy.
+
+</Update>
+
+<Update label="2026-09-12" description="v1.3.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added examples for content updates, release summaries, and maintenance notes.
+- Included sample language that works well for internal and public documentation.
+
+## Improvements
+
+- Simplified the changelog language so you can adapt it quickly.
+- Improved the structure for teams that publish updates on a regular schedule.
+
+## Bug Fixes
+
+- Resolved an issue where sample entries were too long for a quick scan.
+- Fixed minor formatting problems in the example release notes.
+
+</Update>
+
+<Update label="2026-08-05" description="v1.2.0" tags={["improvement"]}>
+
+## New Features
+
+- Added a starter template for documenting recent releases in a predictable format.
+- Included guidance for tracking both product work and documentation changes.
+
+## Improvements
+
+- Clarified how to customize the page for your own product.
+- Made the sample content more generic so you can reuse it across projects.
+- Improved readability by separating release details into smaller sections.
+
+## Bug Fixes
+
+- Cleaned up wording to avoid assuming a specific product implementation.
+- Fixed layout issues in older sample notes.
+
+</Update>
+
+## What to include in future entries
+
+Use each changelog entry to describe what changed, why it matters, and how it affects your readers. You can keep the format lightweight or expand it with more detail as your project grows.
+
+<Steps>
+  <Step title="Record the release">
+    Note the release date, version number, and a short summary of the change. Keep the summary specific and easy to scan.
+  </Step>
+  <Step title="Group the updates">
+    Separate `New Features`, `Improvements`, and `Bug Fixes` so readers can find relevant changes quickly.
+  </Step>
+  <Step title="Link supporting content">
+    Add references to deeper guides, setup instructions, or configuration notes when an update affects user workflows.
+  </Step>
+</Steps>
+
+## Release note formats
+
+<Tabs>
+  <Tab title="Product release" icon="rocket">
+    Use this format when you ship a user-facing improvement.
+
+    ```md
+    - Added export support for scheduled reports
+    - Improved dashboard load time
+    - Fixed an issue with session timeout handling
+    ```
+  </Tab>
+  <Tab title="Documentation update" icon="book-open">
+    Use this format when you update content without changing product behavior.
+
+    ```md
+    - Added a new onboarding guide
+    - Clarified setup steps for first-time users
+    - Updated examples to match the latest interface
+    ```
+  </Tab>
+  <Tab title="Maintenance release" icon="settings">
+    Use this format for internal cleanup, reliability, and polish.
+
+    ```md
+    - Improved validation for configuration values
+    - Fixed broken links in the quickstart guide
+    - Updated screenshots to match the current UI
+    ```
+  </Tab>
+</Tabs>
+
+## Suggested tracking workflow
+
+<CodeGroup tabs="Markdown,JSON">
+  ```markdown
+  ## 2026-10-18
+
+  ### New Features
+
+  - Added a changelog template for repeatable releases.
+  - Improved the format for documenting content changes.
+
+  ### Bug Fixes
+
+  - Corrected spacing issues in sample entries.
+  - Updated wording for clearer release summaries.
+  ```
+  ```json
+  {
+    "date": "2026-10-18",
+    "version": "v1.4.0",
+    "highlights": [
+      "Changelog template added",
+      "Release note formatting improved",
+      "Sample copy cleaned up"
+    ]
+  }
+  ```
+</CodeGroup>
+
+## Tips for maintaining this page
+
+<Columns cols={2}>
+  <Card title="Write for readers" icon="users" href="/quickstart">
+    Focus on what changed, why it matters, and what users should do next.
+  </Card>
+  <Card title="Keep it current" icon="clock" href="/introduction">
+    Update the changelog whenever you publish a meaningful release or content refresh.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+If your release introduces a breaking change, call it out early and link to the relevant setup or migration guidance.
+</Callout>
+
+## Summary
+
+This changelog is intentionally generic so you can customize it for your own product, team, and publishing process. Keep the entries short, consistent, and useful, and your readers will have a reliable source of truth for what changed.
